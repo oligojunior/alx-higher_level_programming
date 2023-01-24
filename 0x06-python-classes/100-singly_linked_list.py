@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Module providing a 'Node' class for a singly-linked list
-"""
+""" Module providing a class called Node for a singly-linked list """
 
 
 class Node:
