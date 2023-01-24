@@ -5,8 +5,7 @@
 class Node():
     """ Definition of a singly-linked list node"""
     def __init__(self, data, next_node=None):
-        """ Instantiate a node
-        """
+        """ Instantiate a node"""
         self.data, self.next_node = data, next_node
 
     @property
@@ -34,6 +33,7 @@ class Node():
         self.__next_node = next_node
 
 
+
 class SinglyLinkedList():
     """ Definition of a singly-linked list"""
     def __init__(self):
@@ -41,7 +41,8 @@ class SinglyLinkedList():
         self.__head = None
 
     def __str__(self):
-        """ Generate a visual representation of a list"""
+        """ Generate a visual representation of a list """
 
     def sorted_insert(self, value):
-        """ Inset a Node into a list sorted in ascending order"""
+        """ Inset a Node into a list sorted in ascending order """
+
