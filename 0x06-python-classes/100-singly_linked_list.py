@@ -2,59 +2,55 @@
 """ Module providing a class called Node for a singly-linked list """
 
 
-class Node:
+class Node():
+    """ Definition of a singly-linked list node
+    """
     def __init__(self, data, next_node=None):
-        self.data = data
-        self.next_node = next_node
+        """ Instantiate a node
+        """
+        self.data, self.next_node = data, next_node
 
     @property
     def data(self):
+        """ Get the data stored in a node
+        """
         return self.__data
 
     @data.setter
-    def data(self, value):
-        if not isinstance(value, int):
+    def data(self, data):
+        """ Set the data stored in a node
+        """
+        if not isinstance(data, int):
             raise TypeError("data must be an integer")
-        self.__data = value
+        self.__data = data
 
     @property
     def next_node(self):
+        """ Get the next node
+        """
         return self.__next_node
 
     @next_node.setter
-    def next_node(self, value):
-        if not isinstance(value, Node) and value is not None:
+    def next_node(self, next_node):
+        """ Set the next node
+        """
+        if next_node is not None and not isinstance(next_node, Node):
             raise TypeError("next_node must be a Node object")
-        self.__next_node = value
+        self.__next_node = next_node
 
 
-class SinglyLinkedList:
-    def __str__(self):
-        rtn = ""
-        ptr = self.__head
-
-        while ptr is not None:
-            rtn += str(ptr.data)
-            if ptr.next_node is not None:
-                rtn += "\n"
-            ptr = ptr.next_node
-
-        return rtn
-
+class SinglyLinkedList():
+    """ Definition of a singly-linked list
+    """
     def __init__(self):
+        """ Instantiate a singly-linked list
+        """
         self.__head = None
 
+    def __str__(self):
+        """ Generate a visual representation of a list
+        """
+
     def sorted_insert(self, value):
-        ptr = self.__head
-
-        while ptr is not None:
-            if ptr.data > value:
-                break
-            ptr_prev = ptr
-            ptr = ptr.next_node
-
-        newNode = Node(value, ptr)
-        if ptr == self.__head:
-            self.__head = newNode
-        else:
-            ptr_prev.next_node = newNode
+        """ Inset a Node into a list sorted in ascending order
+        """
