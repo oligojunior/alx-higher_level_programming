@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """ Module providing class 'MagicClass' to replicate bytecode for ALX """
-
-
 import math
 
 
